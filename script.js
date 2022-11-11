@@ -68,6 +68,18 @@ setBtn.addEventListener('click', function () {
         square.style.width = gridSqSize + '%'
         square.style.height = gridSqSize + '%'
     }
+    if (gridSq.length > containerAreaSq) {
+        const sqDifference = gridSq.length - containerAreaSq
+        console.log(sqDifference)
+        for (let i = 0; i < sqDifference; i++) {
+            gridSq[i].remove()
+        }
+    }
+    for (let i = 0; i < gridSq.length; i++) {
+        const square = gridSq[i]
+        square.style.background = 'transparent'
+    }
+
 })
 
 const colorOptions = document.getElementById('colorOptions')
