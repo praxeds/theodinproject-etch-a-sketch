@@ -18,3 +18,17 @@ refreshBtn.addEventListener('click', function() {
         square.classList.remove('hoverOn')   
     }
 })
+
+const settingsBtn = document.getElementById('settingsBtn')
+const settingsPopUpDiv = document.getElementById('settingsPopUp')
+const popUpBackground = document.getElementById('popUpBackground')
+
+settingsBtn.addEventListener('click', function() {
+    settingsPopUpDiv.classList.toggle('noDisplay')
+    popUpBackground.classList.toggle('noDisplay')
+})
+
+popUpBackground.addEventListener('click', function() {
+    settingsPopUpDiv.classList.toggle('noDisplay')
+    popUpBackground.classList.toggle('noDisplay')
+})

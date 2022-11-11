@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,39 @@
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
                 <li id="refreshBtn"></li>
-                <li id="settingsBtn">
-                    <div id="settingsPopUp">
-                        <p>Number of squares</p>
-                        <input type="number" value="" placeholder="40x40" max="100" min="10" onkeypress="return false">
-                        <p>Pen color:</p>
-                        <div id="colorOptions">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                    <div id="popUpBackground"></div>
-                </li>
+                <li id="settingsBtn"></li>
             </ul>
         </nav>
     </header>
+    <div id="settingsPopUp" class="noDisplay">
+        <div>
+            <p>Number of squares:</p>
+            <input type="number" value="" placeholder="40x40" max="100" min="10"
+                onkeypress="return false">
+            <p>Pen color:</p>
+            <div id="colorOptions">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="buttonsOptions">
+                <button>Reset</button>
+                <button>Set</button>
+            </div>
+        </div>
+    </div>
+    <div id="popUpBackground" class="noDisplay"></div>
     <div id="container"></div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
