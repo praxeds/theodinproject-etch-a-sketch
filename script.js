@@ -32,3 +32,10 @@ popUpBackground.addEventListener('click', function() {
     settingsPopUpDiv.classList.toggle('noDisplay')
     popUpBackground.classList.toggle('noDisplay')
 })
+
+const sqSlider = document.getElementById('sqSlider')
+var sqSliderOutput = document.getElementById('sqSliderOutput')
+sqSliderOutput.innerHTML = `${sqSlider.value} x ${sqSlider.value}`
+sqSlider.oninput = function() {
+    sqSliderOutput.innerHTML = `${this.value} x ${this.value}`
+}
