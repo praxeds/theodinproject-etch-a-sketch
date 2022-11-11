@@ -232,12 +232,6 @@ div#container {
     flex-wrap: wrap;
 }
 
-div.gridSq {
-    width: 2.5%;
-    height: 2.5%;
-    border: 1px dotted black;
-}
-
 .noDisplay {
     display: none!important;
 }

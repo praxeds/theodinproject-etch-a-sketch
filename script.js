@@ -2,26 +2,25 @@ const container = document.getElementById('container')
 for (let i = 0; i < 1600; i++) {
     const gridSq = document.createElement("div");
     gridSq.classList.add('gridSq')
+    gridSq.style.width = '2.5%'
+    gridSq.style.height = '2.5%'
+    gridSq.style.border = '1px dotted black'
     container.append(gridSq)
 }
 
 const gridSq = document.getElementsByClassName('gridSq')
-for (const square of gridSq) {
+for (let i = 0; i < gridSq.length; i++) {
+    const square = gridSq[i]
     square.addEventListener('mouseover', function() {
-        square.setAttribute(
-            'style',
-            'background-color:#ff70a6',
-          );
-    })    
+        square.style.background = '#ff70a6'
+    })      
 }
 
 const refreshBtn = document.getElementById('refreshBtn')
 refreshBtn.addEventListener('click', function() {
-    for (const square of gridSq) {
-        square.setAttribute(
-            'style',
-            'background-color:transparent',
-          );   
+    for (let i = 0; i < gridSq.length; i++) {
+        const square = gridSq[i]
+        square.style.background = 'transparent'    
     }
 })
 
